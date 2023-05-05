@@ -1,0 +1,301 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: hsl(31, 100%, 70%);
+  --button-color: hsl(0, 0%, 17%);
+  --button-color-alt: hsl(0, 0%, 21%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 99%);
+  --container-color: #fff;
+  --border-color: hsl(0, 0%, 94%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Roboto', sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== 
+    Color changes in some parts of 
+    the website, in dark theme 
+==========*/
+.dark-theme .change-theme,
+.dark-theme .nav__toggle,
+.dark-theme .nav__shop,
+.dark-theme .nav__login,
+.dark-theme .button--gray {
+  color: hsl(0, 0%, 95%);
+}
+
+/*==================== CONTACT ====================*/
+.contact-img{
+    margin-top: 55px;
+  }
+  .section__title::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
+  }
+  .story__section-title{
+    font-size: var(--h2-font-size);
+    font-weight: 100;
+  }
+  .story__container{
+    grid-template-columns: none;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  .story__section-title, 
+  .story__section-title, 
+  .story__description,
+  .story__title {
+    text-align: center;
+  }
+  .story__section-title {
+    margin-top: -100px;
+  }
+  .story__title {
+    margin-top: -45px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  .story__description {
+    margin-top: 35px;
+  }
+  .story__data{
+    text-align: center;
+  }
+  .button--small{
+    border-radius: 30px;
+  }
+
+
+  article .container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 2;
+  }
+  article .container .contactinfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+  }
+  article .container .contactinfo iframe{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+  }
+  
+  article .container .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    background: var(--container-color);
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+  }
+  article .container .contactForm h2{
+    color: var(--title-color);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  article .container .contactForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  article .container .contactForm .formBox .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+  }
+  article .container .contactForm .formBox .inputBox.w50{
+    width: 47%;
+  }
+  article .container .contactForm .formBox .inputBox.w100{
+    width: 100%;
+  }
+  article .container .contactForm .formBox .inputBox input,
+  article .container .contactForm .formBox .inputBox textarea{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-color-light);
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    outline: none;
+    background: var(--container-color);
+  }
+  article .container .contactForm .formBox .inputBox textarea{
+    min-height: 120px;
+  }
+  article .container .contactForm .formBox .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-color-light);
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  article .container .contactForm .formBox .inputBox input:focus ~ span,
+  article .container .contactForm .formBox .inputBox textarea:focus ~ span,
+  article .container .contactForm .formBox .inputBox input:valid ~ span,
+  article .container .contactForm .formBox .inputBox textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--first-color);
+  }
+  article .container .contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: var(--button-color);
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+  }
+  article .container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: var(--button-color-alt);
+  }
+
+/*Responsive*/
+
+@media(max-width : 1200px){
+  article .container{
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+  }
+  article .container .contactinfo{
+    top: 0;
+    height: 550px;
+    position: relative;
+  }
+  article .container .contactForm{
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 70px 50px;
+    height: 550px;
+  }
+}
+@media(max-width : 1023px){
+  .story__section-title {
+    margin-top: -60px;
+  }
+}
+
+@media(max-width : 991px){
+  article .container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  article .container .contactForm{
+    width: 100%;
+    height: auto;
+  }
+  article .container .contactinfo{
+    width: 100%;
+    height: auto;
+    top: 45px;
+  }
+  article .container .contactinfo iframe{
+    width: 100%;
+    height: auto;
+  }
+  .story__description {
+    margin-left: 140px;
+    margin-right: 140px;
+    line-height: 30px;
+  }
+}
+@media(min-width : 992px){
+  .story__description {
+    margin-left: 190px;
+    margin-right: 190px;
+    line-height: 30px;
+  }
+}
+
+@media(min-width : 767px){
+  .contact-img{
+    margin-top: 80px;
+  }
+}
+
+@media(max-width : 766px){
+  article .container .contactForm{
+    padding: 50px 40px;
+  }
+  article .container .contactForm .formBox .inputBox.w50{
+    width: 100%;
+  }
+  .story__description {
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 30px;
+  }
+  .story{
+    margin-bottom: -50px;
+  }
+  .story-button{
+    margin-top: -20px;
+    margin-bottom: -10px;
+  }
+}
+
+@media(max-width : 400px){
+  article .container .contactForm{
+    padding: 30px 30px;
+  }
+  .story__description{
+    text-align: justify;
+  }
+}

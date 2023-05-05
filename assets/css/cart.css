@@ -1,0 +1,18 @@
+.totalItem{
+    position: absolute;
+    color:white;
+    margin-left: 51px;
+    margin-top: -16px;
+    background-color: green;
+    font-size: 0.6rem;
+    padding: 1px 3px;
+    font-family: var(--number-font);
+    border-radius: 20%;
+  }
+  #count{
+    position: absolute;
+    z-index: -1;
+  }
+  .cart__card .cart__amount button{
+    background-color: white;
+  }
